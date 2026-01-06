@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ligurian Riviera Yacht Tours</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        .hero-bg {
+            background-image: url("./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg");
+        }
+
+
+        .nav-link.active {
+            color: #E6215A;
+            /* border-bottom: 2px solid #E6215A; */
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body class="font-sans" style="font-family: 'Montserrat', sans-serif">
+
+    <div id="topBar"
+        class="bg-[#ffb6ca] py-2 px-6 flex justify-end gap-4 fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <i class="fab fa-facebook-f text-[#E6215A]"></i>
+        <i class="fab fa-instagram text-[#E6215A]"></i>
+    </div>
+
+    <header id="mainHeader" class="fixed top-8 left-0 right-0  bg-white transition-all duration-500 z-40">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-[30px] md:py-0 py-[10px] min-h-[68px]">
+            <!-- Logo -->
+            <img src="./image/CharterOne_logo-negative_1.svg" alt="Logo"
+                class="h-[30px] md:h-[68px] w-[100px] border-[1px] bg-gray-200">
+
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex gap-8 font-medium items-center">
+
+                    <!-- HOME -->
+                    <a href="./index.html" class="nav-link  hover:text-[#E6215A]">Home</a>
+                    <a href="#" class="nav-link hover:text-[#E6215A] flex items-center gap-1">About</a>
+
+                    <!-- OUR FLEET -->
+                    <div class="relative group">
+                        <button class="nav-link hover:text-[#E6215A] flex items-center gap-1">
+                            Services
+                            <i class="fas fa-chevron-down text-[10px] mt-[2px]"></i>
+                        </button>
+
+                        <!-- MEGA MENU -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full mt-6 w-[720px] bg-white shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                            <div class="grid grid-cols-2 gap-0">
+
+                                <!-- IMAGE -->
+                                <div class="h-[320px]">
+                                    <img src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
+                                        class="w-full h-full object-cover" />
+                                </div>
+
+                                <!-- LINKS -->
+                                <div class="p-10 flex flex-col justify-center">
+                                    <h4 class="uppercase text-[11px] tracking-widest text-[#808285] mb-6">
+                                        Our Fleet
+                                    </h4>
+
+                                    <a href="#" class="text-[18px] mb-4 hover:text-[#E6215A] transition">
+                                        Luxury Yachts
+                                    </a>
+
+                                    <a href="#" class="text-[18px] mb-4 hover:text-[#E6215A] transition">
+                                        Motor Boats
+                                    </a>
+
+                                    <a href="#" class="text-[18px] hover:text-[#E6215A] transition">
+                                        Sailing Boats
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- BOAT TOURS -->
+                    <div class="relative group">
+                        <a href="./boat-tour.html" class="nav-link active hover:text-[#E6215A] flex items-center gap-1">
+                            Boat Tours
+                            <i class="fas fa-chevron-down text-[10px] mt-[2px]"></i>
+                        </a>
+
+                        <!-- MEGA MENU -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full mt-6 w-[820px] bg-white shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                            <div class="grid grid-cols-2">
+
+                                <!-- IMAGE -->
+                                <div class="h-[340px]">
+                                    <img src="./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg"
+                                        class="w-full h-full object-cover" />
+                                </div>
+
+                                <!-- LINKS -->
+                                <div class="p-10">
+                                    <h4 class="uppercase text-[11px] tracking-widest text-[#808285] mb-6">
+                                        Experiences
+                                    </h4>
+
+                                    <ul class="space-y-4 text-[18px]">
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Portofino Tour</a>
+                                        </li>
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Cinque Terre
+                                                Tour</a>
+                                        </li>
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Sunset Cruise</a>
+                                        </li>
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Forte dei Marmi</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="nav-link hover:text-[#E6215A]"> Weekly Charter</a>
+
+                    <a href="#" class="nav-link hover:text-[#E6215A]"> Boats</a>
+
+                </nav>
+
+
+
+                <!-- Search -->
+                <button id="searchBtn"
+                    class="text-[#fff] hidden  md:block font-[400] text-2xl bg-[#E6215A] py-[14px] px-[35px]">
+                    contact
+                </button>
+            </div>
+            <!-- Hamburger -->
+            <button id="menuBtn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobileMenu"
+        class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="mobilePanel"
+            class="bg-white w-3/4 h-full p-6 transform -translate-x-full transition-transform duration-300 ease-out">
+            <button id="closeMenu" class="text-2xl mb-6">
+                <i class="fas fa-times"></i>
+            </button>
+            <nav class="flex flex-col gap-4 text-lg">
+
+                <a href="#" class="nav-link active">Home</a>
+
+                <!-- OUR FLEET -->
+                <div>
+                    <button onclick="toggleDropdown('fleetDrop')"
+                        class="w-full flex justify-between items-center nav-link">
+                        Our Fleet
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+
+                    <div id="fleetDrop" class="hidden flex-col pl-4 mt-2 gap-2 text-[16px] transition-all duration-300">
+                        <a href="#" class="block">Luxury Yachts</a>
+                        <a href="#" class="block">Motor Boats</a>
+                        <a href="#" class="block">Sailing Boats</a>
+                    </div>
+                </div>
+
+                <!-- BOAT TOURS -->
+                <div>
+                    <button onclick="toggleDropdown('tourDrop')"
+                        class="w-full flex justify-between items-center nav-link">
+                        Boat Tours
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+
+                    <div id="tourDrop" class="hidden flex-col pl-4 mt-2 gap-2 text-[16px]">
+                        <a href="#" class="block">Portofino Tour</a>
+                        <a href="#" class="block">Cinque Terre Tour</a>
+                        <a href="#" class="block">Sunset Cruise</a>
+                        <a href="#" class="block">Forte dei Marmi</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link">Contact Us</a>
+
+            </nav>
+
+
+        </div>
+    </div>
+
+    <section class="hero-bg h-[60vh] md:h-[60vw] xl:h-screen bg-cover bg-center bg-fixed flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 pt-40">
+
+            <div class="flex gap-4 justify-center flex-wrap mt-[14vw]">
+                <button
+                    class="border-[2px] font-semibold border-white text-[#fff] py-[15px] px-[80px]  ">PORTOFINO</button>
+                <button class="border-[2px] font-semibold border-white text-[#fff] py-[15px] px-[60px]">FORTE DEI
+                    MARMI</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTENT SECTION ===== -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 style=" font-family: 'Roboto Slab', serif;"
+                class="max-w-2xl mx-auto text-3xl text-center md:text-[2.3rem] font-bold mb-4">
+                Luxury Boat Rental, Charter & Tour in Portofino and Forte dei Marmi
+            </h2>
+
+            <p style=" font-family: 'Roboto Slab', serif;" class=" max-w-2xl text-center mb-5 mx-auto  font-[400]">
+                IN Charterone WE TAKE CARE OF OUR GUESTS, CREATING TAILOR-MADE EXPERIENCES: AN IDEAL ITINERARY WITH THE
+                PERFECT BOAT AND MUCH MORE
+            </p>
+            <p class="max-w-2xl mx-auto font-[400] text-center ">Every year we increase our success with the
+                contribution of our
+                guests: we
+                listen to their needs making
+                them <b> unforgettable experiences on board.</b> With our <b>offices in Portofino “piazzetta”</b> and in
+                <b> Forte dei
+                    Marmi </b> we want to deliver a new service in the Gulf of Tigullio and Cinque Terre, working hard
+                for our
+                customers, we build together <b> uncomparable cruises.</b>
+
+            </p>
+            <!-- <img class=" ml-auto w-[80%]" src="https://Charterone.com/wp-content/uploads/2022/11/onda-scaled.webp"
+                alt=""> -->
+            <div class=" md:max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:items-center mt-[10vw]">
+                <img src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
+                    class="rounded-lg shadow-lg w-[100%] lg:w-[450px]" alt="Yacht" />
+
+                <div class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
+
+                    <h4 class="text-[#808285] uppercase font-[400] text-[11px]"
+                        style="font-family: 'Roboto Slab', serif;">
+                        PERSONALIZED SERVICE
+                    </h4>
+                    <h2 style="font-family: 'Roboto Slab', serif;" class="text-[42px]">About Charterone</h2>
+                    <p style="font-family: 'Montserrat', sans-serif"
+                        class=" leading-relaxed uppercase text-[14px]  text-[#101218]">
+                        Who are we? A Company with a mission: taking care of our guests, step by step, in every single
+                        choice, with the aim of making dedicated services, discovering and exploring the marvelous
+                        environments, unique in the world, such as Portofino, the Five Lands (Cinque Terre), Portovenere
+                        and much more.
+                    </p>
+                    <button
+                        class="py-[10px] text-[13px] font-[400] mt-4 text-white px-[25px] text-center mr-auto max-w-[100px] bg-[#E6215A]">ABOUT</button>
+                </div>
+
+
+            </div>
+            <div class="max-w-5xl mx-auto  md:grid md:grid-cols-2 gap-12 lg:items-center mt-[12vw]">
+
+                <div class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
+
+                    <h4 class="text-[#808285] uppercase font-[400] text-[9px] md:text-[11px]"
+                        style="font-family: 'Roboto Slab', serif;">
+                        a unique comfort and a luxury service
+                    </h4>
+
+                    <h2 style="font-family: 'Roboto Slab', serif;" class="text-[15px] md:text-[20px] lg:text-[42px]">
+                        Our Services
+                    </h2>
+
+                    <p style="font-family: 'Montserrat', sans-serif"
+                        class="leading-relaxed uppercase text-[12px] lg:text-[14px] text-[#101218] mb-6">
+                        With our company every single moment spent on board is special. We use our skills and knowledge
+                        to satisfy the different needs of our customers, to make them live unique experiences with us:
+                    </p>
+
+                    <!--  CUSTOM LIST -->
+                    <ul class="flex flex-col gap-3 mb-6">
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Private Yacht & Boat Charters
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Exclusive Itineraries & Experiences
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Personalized Onboard Services
+                            </span>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="py-[10px] mt-4 text-white px-[25px] text-[13px] font-[400] text-center mr-auto max-w-[100px] bg-[#E6215A]">
+                        SERVICES
+                    </button>
+
+                </div>
+
+                <img src="./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
+                    class="rounded-lg shadow-lg w-[100%] lg:w-[450px]" alt="Yacht" />
+
+            </div>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center mt-[12vw]">
+                <img src="./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
+                    class="rounded-lg shadow-lg w-[100%] lg:w-[450px]" alt="Yacht" />
+                <div class="mt-[-50px]">
+                    <h1 class="text-[40px] lg:text-[80px] text-[#F3F3F3]">OUR BOATS</h1>
+
+                    <div class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
+
+                        <h2 style="font-family: 'Roboto Slab', serif;" class="text-[42px]">Boats</h2>
+                        <p style="font-family: 'Montserrat', sans-serif"
+                            class=" leading-relaxed uppercase text-[12px] lg:text-[14px] text-[#101218]">
+                            Choose your favorite daily tour or weekly cruise and contact us to let you suggest the
+                            perfect
+                            boat for you. Get on board with us to discover all the sea wonders.
+                        </p>
+                        <button
+                            class="py-[10px] mt-4 text-white px-[25px] text-[13px] font-[400] text-center mr-auto max-w-[100px] bg-[#E6215A]">BOATS</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:items-center mt-[12vw]">
+
+                <div class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
+
+                    <h4 class="text-[#808285] uppercase font-[400] text-[11px]"
+                        style="font-family: 'Roboto Slab', serif;">
+                        THE BEAUTY OF THE RIVIERA
+                    </h4>
+
+                    <p style="font-family: 'Montserrat', sans-serif"
+                        class="leading-relaxed uppercase text-[12px] lg:text-[14px] text-[#101218] mb-6">
+                        Book a boat tour with Charterone to enjoy the most fascinating and timeless sea itineraries of
+                        the Ligurian Coast, crossing spectacular landscapes such as those of the Cinque Terre and of the
+                        Tigullio Area.
+
+
+                    </p>
+
+                    <!-- CUSTOM LIST (GRID 2 COLUMNS) -->
+                    <ul class="grid grid-cols-2 gap-x-8 gap-y-4 mb-6">
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class=" text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Private Yacht & Boat Charters
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Exclusive Itineraries & Experiences
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Personalized Onboard Services
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Luxury Sunset Cruises
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Cinque Terre Private Tours
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="w-[6px] h-[6px] mt-[7px] rounded-full bg-[#E6215A]"></span>
+                            <span class="text-[12px] lg:text-[14px] text-[#101218] uppercase"
+                                style="font-family: 'Montserrat', sans-serif;">
+                                Professional Crew & Service
+                            </span>
+                        </li>
+                    </ul>
+
+
+                    <button
+                        class="py-[10px] mt-4 text-white px-[25px] text-[13px] font-[400] text-center mr-auto max-w-[100px] bg-[#E6215A]">
+                        BOAT TOURS
+                    </button>
+
+                </div>
+
+                <img src="./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
+                    class="rounded-lg shadow-lg w-[100%] lg:w-[450px]" alt="Yacht" />
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== INSTAGRAM STYLE GALLERY ===== -->
+    <section class="py-20 bg-[#fafafa]">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="text-center text-[32px] mb-10" style="font-family: 'Roboto Slab', serif;">
+                Moments from Our Experiences
+            </h2>
+
+            <!-- GRID -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[6px]">
+
+                <!-- CARD -->
+                <div class="group relative aspect-square overflow-hidden cursor-pointer">
+                    <img src="./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                    <!-- Overlay -->
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-between p-4">
+
+                        <!-- Icons -->
+                        <div class="flex justify-end gap-4 text-white text-lg">
+                            <i class="far fa-heart hover:text-[#E6215A] transition"></i>
+                            <i class="fas fa-share hover:text-[#E6215A] transition"></i>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-white text-[13px] leading-snug">
+                            Sunset cruise along the Ligurian Riviera — pure elegance, calm waters and unforgettable
+                            views.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="group relative aspect-square overflow-hidden cursor-pointer">
+                    <img src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-between p-4">
+
+                        <div class="flex justify-end gap-4 text-white text-lg">
+                            <i class="far fa-heart hover:text-[#E6215A] transition"></i>
+                            <i class="fas fa-share hover:text-[#E6215A] transition"></i>
+                        </div>
+
+                        <p class="text-white text-[13px] leading-snug">
+                            Private yacht charter designed for comfort, freedom and exclusive coastal exploration.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="group relative aspect-square overflow-hidden cursor-pointer">
+                    <img src="./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-between p-4">
+
+                        <div class="flex justify-end gap-4 text-white text-lg">
+                            <i class="far fa-heart hover:text-[#E6215A] transition"></i>
+                            <i class="fas fa-share hover:text-[#E6215A] transition"></i>
+                        </div>
+
+                        <p class="text-white text-[13px] leading-snug">
+                            Explore hidden bays and iconic destinations like Portofino and Cinque Terre.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="group relative aspect-square overflow-hidden cursor-pointer">
+                    <img src="./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-between p-4">
+
+                        <div class="flex justify-end gap-4 text-white text-lg">
+                            <i class="far fa-heart hover:text-[#E6215A] transition"></i>
+                            <i class="fas fa-share hover:text-[#E6215A] transition"></i>
+                        </div>
+
+                        <p class="text-white text-[13px] leading-snug">
+                            Every journey is tailor-made, combining luxury, privacy and breathtaking scenery.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#101218] text-white pt-20">
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <div>
+                <img src="./image/CharterOne_logo-negative_1.svg" alt="Logo" class="h-[60px] mb-6">
+                <p class="text-[14px] leading-relaxed text-[#cfcfcf]">
+                    Luxury yacht charter & boat rental experiences along the Ligurian Riviera.
+                    Tailor-made cruises in Portofino, Cinque Terre and Forte dei Marmi.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="uppercase text-[13px] tracking-widest mb-6 text-[#E6215A]">
+                    Contacts
+                </h4>
+
+                <ul class="space-y-4 text-[14px] text-[#cfcfcf]">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt mt-1 text-[#E6215A]"></i>
+                        <span>
+                            Portofino Piazzetta<br>
+                            Forte dei Marmi
+                        </span>
+                    </li>
+
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone text-[#E6215A]"></i>
+                        <span>+39 000 000 0000</span>
+                    </li>
+
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-[#E6215A]"></i>
+                        <span>info@Charterone.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="uppercase text-[13px] tracking-widest mb-6 text-[#E6215A]">
+                    Explore
+                </h4>
+
+                <ul class="space-y-3 text-[14px] text-[#cfcfcf]">
+                    <li><a href="#" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#" class="hover:text-white transition">Our Fleet</a></li>
+                    <li><a href="#" class="hover:text-white transition">Boat Tours</a></li>
+                    <li><a href="#" class="hover:text-white transition">Experiences</a></li>
+                    <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="uppercase text-[13px] tracking-widest mb-6 text-[#E6215A]">
+                    Newsletter
+                </h4>
+
+                <p class="text-[14px] text-[#cfcfcf] mb-4">
+                    Subscribe to receive exclusive offers and cruise inspirations.
+                </p>
+
+                <form class="flex border border-[#333]">
+                    <input type="email" placeholder="Your email"
+                        class="w-full px-4 py-3 bg-transparent text-[14px] outline-none text-white placeholder:text-[#999]">
+                    <button type="submit"
+                        class="bg-[#E6215A] px-5 flex items-center justify-center hover:bg-[#c91b4f] transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="border-t border-[#222] mt-16"></div>
+
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <p class="text-[13px] text-[#999]">
+                © 2026 Charterone — Luxury Yacht Charter. All rights reserved.
+            </p>
+
+            <div class="flex gap-5 text-[#cfcfcf] text-lg">
+                <a href="#" class="hover:text-[#E6215A] transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#E6215A] transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#E6215A] transition"><i class="fab fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        const topBar = document.getElementById("topBar");
+        const header = document.getElementById("mainHeader");
+        // const menuBtn = document.getElementById("menuBtn");
+        // const mobileMenu = document.getElementById("mobileMenu");
+        // const closeMenu = document.getElementById("closeMenu");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 80) {
+                // hide top bar
+                topBar.classList.add("-translate-y-full", "opacity-0");
+
+                // popup header
+                header.classList.add("top-0", "shadow-lg");
+                header.classList.remove("top-8");
+            } else {
+                // show top bar
+                topBar.classList.remove("-translate-y-full", "opacity-0");
+
+                // reset header
+                header.classList.add("top-8");
+                header.classList.remove("top-0", "shadow-lg");
+            }
+        });
+
+        // menuBtn.addEventListener("click", () => {
+        //     mobileMenu.classList.remove("hidden");
+        // });
+
+        // closeMenu.addEventListener("click", () => {
+        //     mobileMenu.classList.add("hidden");
+        // });
+
+        // mobileMenu.addEventListener("click", (e) => {
+        //     if (e.target === mobileMenu) {
+        //         mobileMenu.classList.add("hidden");
+        //     }
+        // });
+
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+            });
+        });
+
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            el.classList.toggle("hidden");
+            el.classList.toggle("flex");
+        }
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobilePanel = document.getElementById("mobilePanel");
+        const closeMenu = document.getElementById("closeMenu");
+
+        function openMenu() {
+            mobileMenu.classList.remove("pointer-events-none");
+            mobileMenu.classList.add("opacity-100");
+            mobilePanel.classList.remove("-translate-x-full");
+        }
+
+        function closeMenuFn() {
+            mobileMenu.classList.remove("opacity-100");
+            mobilePanel.classList.add("-translate-x-full");
+
+            setTimeout(() => {
+                mobileMenu.classList.add("pointer-events-none");
+            }, 300);
+        }
+
+        menuBtn.addEventListener("click", openMenu);
+        closeMenu.addEventListener("click", closeMenuFn);
+
+        mobileMenu.addEventListener("click", (e) => {
+            if (e.target === mobileMenu) {
+                closeMenuFn();
+            }
+        });
+
+
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            el.classList.toggle("hidden");
+            el.classList.toggle("flex");
+        }
+    </script>
+
+</body>
+
+</html>

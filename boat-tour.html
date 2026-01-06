@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boat-tour</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        .hero-bg {
+            background-image: url("./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg");
+        }
+
+
+        .nav-link.active {
+            color: #E6215A;
+            /* border-bottom: 2px solid #E6215A; */
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body class="font-sans" style="font-family: 'Montserrat', sans-serif">
+
+    <div id="topBar"
+        class="bg-[#ffb6ca] py-2 px-6 flex justify-end gap-4 fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <i class="fab fa-facebook-f text-[#E6215A]"></i>
+        <i class="fab fa-instagram text-[#E6215A]"></i>
+    </div>
+
+    <header id="mainHeader" class="fixed top-8 left-0 right-0  bg-white transition-all duration-500 z-40">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-[30px] md:py-0 py-[10px] min-h-[68px]">
+            <!-- Logo -->
+            <img src="./image/CharterOne_logo-negative_1.svg" alt="Logo"
+                class="h-[30px] md:h-[68px] w-[100px] border-[1px] bg-gray-200">
+
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex gap-8 font-medium items-center">
+
+                    <!-- HOME -->
+                    <a href="./index.html" class="nav-link  hover:text-[#E6215A]">Home</a>
+                    <a href="#" class="nav-link hover:text-[#E6215A] flex items-center gap-1">About</a>
+
+                    <!-- OUR FLEET -->
+                    <div class="relative group">
+                        <button class="nav-link hover:text-[#E6215A] flex items-center gap-1">
+                            Services
+                            <i class="fas fa-chevron-down text-[10px] mt-[2px]"></i>
+                        </button>
+
+                        <!-- MEGA MENU -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full mt-6 w-[720px] bg-white shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                            <div class="grid grid-cols-2 gap-0">
+
+                                <!-- IMAGE -->
+                                <div class="h-[320px]">
+                                    <img src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
+                                        class="w-full h-full object-cover" />
+                                </div>
+
+                                <!-- LINKS -->
+                                <div class="p-10 flex flex-col justify-center">
+                                    <h4 class="uppercase text-[11px] tracking-widest text-[#808285] mb-6">
+                                        Our Fleet
+                                    </h4>
+
+                                    <a href="#" class="text-[18px] mb-4 hover:text-[#E6215A] transition">
+                                        Luxury Yachts
+                                    </a>
+
+                                    <a href="#" class="text-[18px] mb-4 hover:text-[#E6215A] transition">
+                                        Motor Boats
+                                    </a>
+
+                                    <a href="#" class="text-[18px] hover:text-[#E6215A] transition">
+                                        Sailing Boats
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- BOAT TOURS -->
+                    <div class="relative group">
+                        <a href="./boat-tour.html" class="nav-link active hover:text-[#E6215A] flex items-center gap-1">
+                            Boat Tours
+                            <i class="fas fa-chevron-down text-[10px] mt-[2px]"></i>
+                        </a>
+
+                        <!-- MEGA MENU -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full mt-6 w-[820px] bg-white shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                            <div class="grid grid-cols-2">
+
+                                <!-- IMAGE -->
+                                <div class="h-[340px]">
+                                    <img src="./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg"
+                                        class="w-full h-full object-cover" />
+                                </div>
+
+                                <!-- LINKS -->
+                                <div class="p-10">
+                                    <h4 class="uppercase text-[11px] tracking-widest text-[#808285] mb-6">
+                                        Experiences
+                                    </h4>
+
+                                    <ul class="space-y-4 text-[18px]">
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Portofino Tour</a>
+                                        </li>
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Cinque Terre
+                                                Tour</a>
+                                        </li>
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Sunset Cruise</a>
+                                        </li>
+                                        <li><a href="#" class="hover:text-[#E6215A] transition">Forte dei Marmi</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="nav-link hover:text-[#E6215A]"> Weekly Charter</a>
+
+                    <a href="#" class="nav-link hover:text-[#E6215A]"> Boats</a>
+
+                </nav>
+
+
+
+                <!-- Search -->
+                <button id="searchBtn"
+                    class="text-[#fff] hidden  md:block font-[400] text-2xl bg-[#E6215A] py-[14px] px-[35px]">
+                    contact
+                </button>
+            </div>
+            <!-- Hamburger -->
+            <button id="menuBtn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobileMenu"
+        class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="mobilePanel"
+            class="bg-white w-3/4 h-full p-6 transform -translate-x-full transition-transform duration-300 ease-out">
+            <button id="closeMenu" class="text-2xl mb-6">
+                <i class="fas fa-times"></i>
+            </button>
+            <nav class="flex flex-col gap-4 text-lg">
+
+                <a href="#" class="nav-link active">Home</a>
+
+                <!-- OUR FLEET -->
+                <div>
+                    <button onclick="toggleDropdown('fleetDrop')"
+                        class="w-full flex justify-between items-center nav-link">
+                        Our Fleet
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+
+                    <div id="fleetDrop" class="hidden flex-col pl-4 mt-2 gap-2 text-[16px] transition-all duration-300">
+                        <a href="#" class="block">Luxury Yachts</a>
+                        <a href="#" class="block">Motor Boats</a>
+                        <a href="#" class="block">Sailing Boats</a>
+                    </div>
+                </div>
+
+                <!-- BOAT TOURS -->
+                <div>
+                    <button onclick="toggleDropdown('tourDrop')"
+                        class="w-full flex justify-between items-center nav-link">
+                        Boat Tours
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+
+                    <div id="tourDrop" class="hidden flex-col pl-4 mt-2 gap-2 text-[16px]">
+                        <a href="#" class="block">Portofino Tour</a>
+                        <a href="#" class="block">Cinque Terre Tour</a>
+                        <a href="#" class="block">Sunset Cruise</a>
+                        <a href="#" class="block">Forte dei Marmi</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link">Contact Us</a>
+
+            </nav>
+
+
+        </div>
+    </div>
+
+    <section class="hero-bg h-[60vh] md:h-[60vw] xl:h-screen bg-cover bg-center bg-fixed flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 pt-40">
+
+
+        </div>
+    </section>
+
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 style="font-family: 'Roboto Slab', serif;"
+                class="max-w-2xl mx-auto text-3xl text-center md:text-[2.3rem] font-normal  mb-4">
+                BOAT TOURS
+            </h2>
+
+            <h4 style=" font-family: 'Roboto Slab', serif;"
+                class="max-w-2xl mx-auto text-3xl text-center md:text-[1.3rem] font-normal mb-4">
+                The Beauty of the Riviera, the Charm and Enchantment of the Sea
+            </h4>
+            <p style=" font-family: 'Roboto Slab', serif;" class=" max-w-2xl text-center mb-5 mx-auto  font-[400]">
+                Book a boat tour with Charterone and set sail to discover the most breathtaking and timeless sea
+                itineraries of the Ligurian Coast. Starting in 2025, we are also present in Forte dei Marmi with our own
+                office and fleet, offering exclusive experiences along this stunning coastline.
+
+            </p>
+            <p class="max-w-2xl mx-auto font-[400] text-center ">Every year we increase our success with the
+                Famous for its rugged cliffs, crystal-clear waters, and charming seaside villages, the Ligurian Coast is
+                best explored by boat. A boat tour allows you to fully immerse yourself in its beauty while cruising
+                through spectacular landscapes.
+            </p>
+            <p class="max-w-2xl mx-auto font-[400] text-center ">Every year we increase our success with the
+                On your journey, you will admire iconic destinations such as the Cinque Terre, Portovenere, the Gulf of
+                Poets, Framura, and the Tigullio Area. Each stop offers a unique perspective of this enchanting region,
+                making your experience truly unforgettable.
+
+            </p>
+            <!-- <img class=" ml-auto w-[80%]" src="https://Charterone.com/wp-content/uploads/2022/11/onda-scaled.webp"
+                alt=""> -->
+            <div class="flex flex-col lg:flex-row  lg:max-w-5xl relative mx-auto   gap-12 lg:items-center mt-[10vw]">
+                <img src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
+                    class="rounded-lg shadow-lg w-[100%] lg:w-[80%] h-[500px]" alt="Yacht" />
+
+                <div
+                    class="flex lg:max-w-[350px] p-[20px] md:p-[50px] border lg:absolute lg:right-0 top-[10%] bg-[#fff] flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
+                    <h2 style="font-family: 'Roboto Slab', serif;" class="text-[25px]">
+                        PORTOFINO BOAT TOURS
+                    </h2>
+                    <div class="w-[20vw] ml-[10vh] h-[0.1vw] bg-[#000] my-5"></div>
+
+                    <p style="font-family: 'Montserrat', sans-serif"
+                        class=" leading-relaxed uppercase text-[14px]  text-[#101218]">
+                        Explore the beauty of the Ligurian Coast with an exclusive boat tour in Portofino
+                    </p>
+                    <button
+                        class="py-[10px] w-full text-[14px] md:text-[18px] font-[400] mt-4 text-white px-[25px] text-center mr-auto  bg-[#E6215A]">
+                        PORTOFINO BOAT TOUR
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div
+                class="flex flex-col-reverse lg:flex-row lg:max-w-5xl relative mx-auto   gap-12 lg:items-center mt-[10vw]">
+
+                <div
+                    class="flex lg:max-w-[350px] p-[20px] md:p-[50px] border lg:absolute left-0 top-[10%] bg-[#fff] flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
+                    <h2 style="font-family: 'Roboto Slab', serif;" class="text-[25px]">
+                        PORTOFINO BOAT TOURS
+                    </h2>
+                    <div class="w-[20vw] ml-[10vh] h-[0.1vw] bg-[#000] my-5"></div>
+
+                    <p style="font-family: 'Montserrat', sans-serif"
+                        class=" leading-relaxed uppercase text-[14px]  text-[#101218]">
+                        Explore the beauty of the Ligurian Coast with an exclusive boat tour in Portofino
+                    </p>
+                    <button
+                        class="py-[10px] w-full text-[14px] md:text-[18px] font-[400] mt-4 text-white px-[25px] text-center mr-auto  bg-[#E6215A]">
+                        PORTOFINO BOAT TOUR
+                    </button>
+                </div>
+
+                <img src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
+                    class="rounded-lg shadow-lg w-[100%] lg:w-[80%] h-[200px] object-cover lg:h-[500px] ml-auto"
+                    alt="Yacht" />
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="bg-[#f7f7f7] py-24">
+        <div class="  mx-auto px-[20px] md:px-[50px] lg:px-[100px]">
+
+            <h2 class="text-center text-[28px] font-normal mb-6" style="font-family: 'Roboto Slab', serif;">
+                BOOK OUR BOAT TOURS
+            </h2>
+
+            <p class="text-center text-[15px] mb-10">
+                Fill out the following form to send your booking request.
+                A member of our staff will answer you within 24 hours.
+            </p>
+
+            <div class="flex justify-center gap-[40px]">
+                <div class="flex gap-2 justify-center items-start lg:block hidden">
+                    <img decoding="async" width="150" height="150"
+                        src="https://Charterone.com/wp-content/uploads/2023/01/wa-ico-150x150.webp"
+                        class="attachment-thumbnail size-thumbnail wp-image-4914 entered lazyloaded" alt="whatsapp"
+                        data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-cmp-ab="2" data-cmp-info="10"
+                        data-ll-status="loaded" sizes="(max-width: 150px) 100vw, 150px">
+                    <h2 style="font-family: 'Roboto Slab', serif;"
+                        class="mt-[30px] text-[18px] md:text-[25px] max-w-[200px]">Get In
+                        Touch With
+                        Us!</h2>
+                </div>
+
+                <form class="space-y-6 text-[14px] flex-1">
+
+                    <!-- What are you looking for -->
+                    <div>
+                        <select class="w-full border border-[#ccc] px-3 py-[20px] text-[#666]">
+                            <option class="py-[20px]" value="">What are you looking for?</option>
+                            <option class="py-[20px]">Boat Charter</option>
+                            <option class="py-[20px]">Taxi Boat</option>
+                            <option class="py-[20px]">Tender Service</option>
+                            <option class="py-[20px]">Further Info</option>
+                            <option class="py-[20px]">Gift Voucher</option>
+                        </select>
+                    </div>
+
+                    <!-- Departure Port -->
+                    <div>
+                        <select class="w-full border border-[#ccc] px-3 py-[20px] text-[#666]">
+                            <option value="">Porto di partenza</option>
+                            <option>Portofino</option>
+                            <option>Santa Margherita Ligure</option>
+                            <option>Forte dei Marmi</option>
+                            <option>La Spezia</option>
+                        </select>
+                    </div>
+
+                    <!-- Name -->
+                    <div class=" flex gap-4 mb-4">
+                        <input type="text" placeholder="First Name *"
+                            class="w-full border py-[20px] text-[#666] border-[#ccc] px-3 ">
+
+                        <input type="text" placeholder="Last Name *"
+                            class="w-full border border-[#ccc] px-3 py-[20px] text-[#666]">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <input type="email" placeholder="Email *"
+                            class="w-full border border-[#ccc] px-3 py-[20px] text-[#666]">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <input type="text" placeholder="Country number & Phone *"
+                            class="w-full border border-[#ccc] px-3 py-[20px] text-[#666]">
+                    </div>
+
+
+                    <!-- Message -->
+                    <div>
+                        <textarea rows="4" placeholder="Comment or Message"
+                            class="w-full border border-[#ccc] px-3 py-[20px] text-[#666]"></textarea>
+                    </div>
+
+                    <!-- Checkboxes -->
+                    <div class="space-y-2 text-[13px]">
+                        <label class="flex items-start gap-2">
+                            <input type="checkbox" class="mt-1">
+                            <span>I have read and accept the PRIVACY POLICY</span>
+                        </label>
+
+                        <label class="flex items-start gap-2">
+                            <input type="checkbox" class="mt-1">
+                            <span>I authorize Charterone to process my personal data</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit -->
+                    <button class="bg-[#E6215A] text-white px-8 py-3 text-[14px]">
+                        Send Message
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#101218] text-white pt-20">
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <div>
+                <img src="./image/CharterOne_logo-negative_1.svg" alt="Logo" class="h-[60px] mb-6">
+                <p class="text-[14px] leading-relaxed text-[#cfcfcf]">
+                    Luxury yacht charter & boat rental experiences along the Ligurian Riviera.
+                    Tailor-made cruises in Portofino, Cinque Terre and Forte dei Marmi.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="uppercase text-[13px] tracking-widest mb-6 text-[#E6215A]">
+                    Contacts
+                </h4>
+
+                <ul class="space-y-4 text-[14px] text-[#cfcfcf]">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt mt-1 text-[#E6215A]"></i>
+                        <span>
+                            Portofino Piazzetta<br>
+                            Forte dei Marmi
+                        </span>
+                    </li>
+
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone text-[#E6215A]"></i>
+                        <span>+39 000 000 0000</span>
+                    </li>
+
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-[#E6215A]"></i>
+                        <span>info@Charterone.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="uppercase text-[13px] tracking-widest mb-6 text-[#E6215A]">
+                    Explore
+                </h4>
+
+                <ul class="space-y-3 text-[14px] text-[#cfcfcf]">
+                    <li><a href="#" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#" class="hover:text-white transition">Our Fleet</a></li>
+                    <li><a href="#" class="hover:text-white transition">Boat Tours</a></li>
+                    <li><a href="#" class="hover:text-white transition">Experiences</a></li>
+                    <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="uppercase text-[13px] tracking-widest mb-6 text-[#E6215A]">
+                    Newsletter
+                </h4>
+
+                <p class="text-[14px] text-[#cfcfcf] mb-4">
+                    Subscribe to receive exclusive offers and cruise inspirations.
+                </p>
+
+                <form class="flex border border-[#333]">
+                    <input type="email" placeholder="Your email"
+                        class="w-full px-4 py-3 bg-transparent text-[14px] outline-none text-white placeholder:text-[#999]">
+                    <button type="submit"
+                        class="bg-[#E6215A] px-5 flex items-center justify-center hover:bg-[#c91b4f] transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="border-t border-[#222] mt-16"></div>
+
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <p class="text-[13px] text-[#999]">
+                © 2026 Charterone — Luxury Yacht Charter. All rights reserved.
+            </p>
+
+            <div class="flex gap-5 text-[#cfcfcf] text-lg">
+                <a href="#" class="hover:text-[#E6215A] transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#E6215A] transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#E6215A] transition"><i class="fab fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        const topBar = document.getElementById("topBar");
+        const header = document.getElementById("mainHeader");
+        // const menuBtn = document.getElementById("menuBtn");
+        // const mobileMenu = document.getElementById("mobileMenu");
+        // const closeMenu = document.getElementById("closeMenu");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 80) {
+                // hide top bar
+                topBar.classList.add("-translate-y-full", "opacity-0");
+
+                // popup header
+                header.classList.add("top-0", "shadow-lg");
+                header.classList.remove("top-8");
+            } else {
+                // show top bar
+                topBar.classList.remove("-translate-y-full", "opacity-0");
+
+                // reset header
+                header.classList.add("top-8");
+                header.classList.remove("top-0", "shadow-lg");
+            }
+        });
+
+        // menuBtn.addEventListener("click", () => {
+        //     mobileMenu.classList.remove("hidden");
+        // });
+
+        // closeMenu.addEventListener("click", () => {
+        //     mobileMenu.classList.add("hidden");
+        // });
+
+        // mobileMenu.addEventListener("click", (e) => {
+        //     if (e.target === mobileMenu) {
+        //         mobileMenu.classList.add("hidden");
+        //     }
+        // });
+
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+            });
+        });
+
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            el.classList.toggle("hidden");
+            el.classList.toggle("flex");
+        }
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobilePanel = document.getElementById("mobilePanel");
+        const closeMenu = document.getElementById("closeMenu");
+
+        function openMenu() {
+            mobileMenu.classList.remove("pointer-events-none");
+            mobileMenu.classList.add("opacity-100");
+            mobilePanel.classList.remove("-translate-x-full");
+        }
+
+        function closeMenuFn() {
+            mobileMenu.classList.remove("opacity-100");
+            mobilePanel.classList.add("-translate-x-full");
+
+            setTimeout(() => {
+                mobileMenu.classList.add("pointer-events-none");
+            }, 300);
+        }
+
+        menuBtn.addEventListener("click", openMenu);
+        closeMenu.addEventListener("click", closeMenuFn);
+
+        mobileMenu.addEventListener("click", (e) => {
+            if (e.target === mobileMenu) {
+                closeMenuFn();
+            }
+        });
+
+
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            el.classList.toggle("hidden");
+            el.classList.toggle("flex");
+        }
+    </script>
+
+</body>
+
+</html>
