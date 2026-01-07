@@ -5,18 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ligurian Riviera Yacht Tours</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         .hero-bg {
             background-image: url("./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg");
+            transition: background-image 0.8s ease-in-out;
         }
 
 
@@ -205,14 +210,51 @@
         </div>
     </div>
 
-    <section class="hero-bg h-[60vh] md:h-[60vw] xl:h-screen bg-cover bg-center bg-fixed flex items-center text-white">
-        <div class="max-w-7xl mx-auto px-6 pt-40">
+    <section
+        class="hero-bg h-[60vh] md:h-[60vw] xl:h-screen bg-cover bg-center bg-fixed flex items-center justify-center text-white relative">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/40"></div>
 
-            <div class="flex gap-4 justify-center flex-wrap mt-[14vw]">
-                <button
-                    class="border-[2px] font-semibold border-white text-[#fff] py-[15px] px-[80px]  ">PORTOFINO</button>
-                <button class="border-[2px] font-semibold border-white text-[#fff] py-[15px] px-[60px]">FORTE DEI
-                    MARMI</button>
+        <!-- Arrows -->
+        <button id="prevSlide"
+            class="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white text-4xl p-2 transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="nextSlide"
+            class="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white text-4xl p-2 transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <h1 data-aos="fade-up" class="text-3xl md:text-5xl lg:text-6xl uppercase tracking-widest mb-6 font-light"
+                style="font-family: 'Montserrat', sans-serif;">
+                Unforgettable Boat Trips
+            </h1>
+            <h2 data-aos="fade-up" data-aos-delay="100" style="font-family: 'Roboto Slab', serif;"
+                class="text-lg md:text-xl lg:text-2xl uppercase tracking-widest mb-12 lg:mb-16">
+                Discover the Gulf of Naples and the Amalfi Coast
+            </h2>
+
+            <!-- Button Grid -->
+            <div data-aos="fade-up" data-aos-delay="200" class="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+                <a href="#"
+                    class="min-w-[280px] bg-[#1e2330]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Capri
+                    Island Private Tour</a>
+                <a href="#"
+                    class="min-w-[280px] bg-[#1e2330]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Positano
+                    & Amalfi Tour</a>
+                <a href="#"
+                    class="min-w-[280px] bg-[#1e2330]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Capri
+                    & Positano Private Tour</a>
+                <a href="#"
+                    class="min-w-[280px] bg-[#1e2330]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Capri,
+                    Romantic Couple's Tour</a>
+                <a href="#"
+                    class="min-w-[280px] bg-[#1e2330]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Ischia
+                    & Procida Private Tour</a>
+                <a href="#"
+                    class="min-w-[280px] bg-[#1e2330]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Private
+                    Sunset & Aperitif</a>
             </div>
         </div>
     </section>
@@ -220,12 +262,13 @@
     <!-- ===== CONTENT SECTION ===== -->
     <section class="py-20">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 style=" font-family: 'Roboto Slab', serif;"
+            <h2 data-aos="fade-up" style=" font-family: 'Roboto Slab', serif;"
                 class="max-w-2xl mx-auto text-3xl text-center md:text-[2.3rem] font-bold mb-4">
                 Luxury Boat Rental, Charter & Tour in Portofino and Forte dei Marmi
             </h2>
 
-            <p style=" font-family: 'Roboto Slab', serif;" class=" max-w-2xl text-center mb-5 mx-auto  font-[400]">
+            <p data-aos="fade-up" style=" font-family: 'Roboto Slab', serif;"
+                class=" max-w-2xl text-center mb-5 mx-auto  font-[400]">
                 IN Charterone WE TAKE CARE OF OUR GUESTS, CREATING TAILOR-MADE EXPERIENCES: AN IDEAL ITINERARY WITH THE
                 PERFECT BOAT AND MUCH MORE
             </p>
@@ -243,10 +286,10 @@
             <!-- <img class=" ml-auto w-[80%]" src="https://Charterone.com/wp-content/uploads/2022/11/onda-scaled.webp"
                 alt=""> -->
             <div class=" md:max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:items-center mt-[10vw]">
-                <img src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
+                <img data-aos="fade-right" src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
                     class="rounded-lg shadow-lg w-[100%] lg:w-[450px]" alt="Yacht" />
 
-                <div class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
+                <div data-aos="fade-left" class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
 
                     <h4 class="text-[#808285] uppercase font-[400] text-[11px]"
                         style="font-family: 'Roboto Slab', serif;">
@@ -437,7 +480,7 @@
     <section class="py-20 bg-[#fafafa]">
         <div class="max-w-7xl mx-auto px-6">
 
-            <h2 class="text-center text-[32px] mb-10" style="font-family: 'Roboto Slab', serif;">
+            <h2 data-aos="fade-up" class="text-center text-[32px] mb-10" style="font-family: 'Roboto Slab', serif;">
                 Moments from Our Experiences
             </h2>
 
@@ -717,6 +760,43 @@
         }
     </script>
 
+    <!-- Hero Slider Script -->
+    <script>
+        const heroSection = document.querySelector('.hero-bg');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+
+        const images = [
+            "./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg",
+            "./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp",
+            "./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        function updateBackground() {
+            heroSection.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateBackground();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateBackground();
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>
