@@ -20,7 +20,7 @@
 
     <style>
         .hero-bg {
-            background-image: url("./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg");
+            background-image: url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop");
             transition: background-image 0.8s ease-in-out;
         }
 
@@ -41,17 +41,18 @@
         <i class="fab fa-instagram text-[#E6215A]"></i>
     </div>
 
-    <header id="mainHeader" class="fixed top-8 left-0 right-0  bg-white transition-all duration-500 z-40">
+    <header id="mainHeader"
+        class="fixed top-8 left-0 right-0 bg-transparent text-white transition-all duration-500 z-40">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-[30px] md:py-0 py-[10px] min-h-[68px]">
             <!-- Logo -->
-            <img src="./image/CharterOne_logo-negative_1.svg" alt="Logo"
-                class="h-[30px] md:h-[68px] w-[100px] border-[1px] bg-gray-200">
+            <img id="mainLogo" src="./image/CharterOne_logo-negative_1.svg" alt="Logo"
+                class="h-[30px] md:h-[68px] w-[100px] transition-all duration-300">
 
             <div class="flex items-center gap-8">
                 <nav class="hidden md:flex gap-8 font-medium items-center">
 
                     <!-- HOME -->
-                    <a href="./index.html" class="nav-link  hover:text-[#E6215A]">Home</a>
+                    <a href="./index.html" class="nav-link hover:text-[#E6215A]">Home</a>
                     <a href="#" class="nav-link hover:text-[#E6215A] flex items-center gap-1">About</a>
 
                     <!-- OUR FLEET -->
@@ -149,7 +150,7 @@
 
                 <!-- Search -->
                 <button id="searchBtn"
-                    class="text-[#fff] hidden  md:block font-[400] text-2xl bg-[#E6215A] py-[14px] px-[35px]">
+                    class="text-[#fff] hidden  md:block font-[400] text-1xl bg-[#E6215A] py-[14px] px-[25px]">
                     contact
                 </button>
             </div>
@@ -211,7 +212,7 @@
     </div>
 
     <section
-        class="hero-bg h-screen bg-cover bg-center bg-fixed flex items-center justify-center text-white relative overflow-hidden">
+        class="hero-bg h-screen bg-cover bg-center flex items-center justify-center text-white relative overflow-hidden">
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black/40"></div>
 
@@ -227,42 +228,38 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
             <h1 data-aos="fade-up"
-                class="text-2xl md:text-3xl lg:text-3xl uppercase tracking-widest mb-4 md:mb-6 font-light"
+                class="text-2xl md:text-3xl lg:text-3xl uppercase tracking-widest mb-3 md:mb-6 font-light"
                 style="font-family: 'Montserrat', sans-serif;">
-                Unforgettable Boat Trips
+                Where Every Wave Tells a Story
             </h1>
             <h2 data-aos="fade-up" data-aos-delay="100" style="font-family: 'Roboto Slab', serif;"
-                class="text-sm md:text-base lg:text-2xl uppercase tracking-widest mb-8 md:mb-12 lg:mb-16">
-                Discover the Gulf of Naples and the Amalfi Coast
+                class="text-xs md:text-base lg:text-2xl uppercase tracking-widest mb-6 md:mb-12 lg:mb-16">
+                Experience the Italian Riviera, Tailored to You
             </h2>
 
             <!-- Button Grid -->
+            <!-- Main CTAs -->
             <div data-aos="fade-up" data-aos-delay="200"
-                class="hidden md:flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-                <a href="#" class="min-w-[280px] bg-[#E6215A
-] hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Capri
-                    Island Private Tour</a>
-                <a href="#" class="min-w-[280px] bg-[#E6215A
-]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Positano
-                    & Amalfi Tour</a>
-                <a href="#" class="min-w-[280px] bg-[#E6215A
-]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Capri
-                    & Positano Private Tour</a>
-                <a href="#" class="min-w-[280px] bg-[#E6215A
-]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Capri,
-                    Romantic Couple's Tour</a>
-                <a href="#" class="min-w-[280px] bg-[#E6215A
-]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Ischia
-                    & Procida Private Tour</a>
-                <a href="#" class="min-w-[280px] bg-[#E6215A
-]/90 hover:bg-[#E6215A] text-white py-4 px-6 text-[13px] font-bold uppercase transition-all duration-300">Private
-                    Sunset & Aperitif</a>
+                class="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
+
+                <!-- Book Now -->
+                <a href="#contact"
+                    class="min-w-[200px] bg-[#E6215A] hover:bg-[#c91b4f] text-white py-4 px-4 text-[14px] font-bold uppercase tracking-wider transition-all duration-300">
+                    Book Now
+                </a>
+
+                <!-- Message -->
+                <a href="https://wa.me/390000000000" target="_blank"
+                    class="min-w-[200px] border-2 border-white hover:bg-white hover:text-black text-white py-4 px-4 text-[14px] font-bold uppercase tracking-wider transition-all duration-300">
+                    Send Message
+                </a>
+
             </div>
         </div>
     </section>
 
     <!-- ===== CONTENT SECTION ===== -->
-    <section class="py-20">
+    <section class="py-12 md:py-20">
         <div class="max-w-7xl mx-auto px-6">
             <h2 data-aos="fade-up" style=" font-family: 'Roboto Slab', serif;"
                 class="max-w-2xl mx-auto text-1xl text-center md:text-[2.3rem] font-bold mb-4">
@@ -287,7 +284,7 @@
             </p>
             <!-- <img class=" ml-auto w-[80%]" src="https://Charterone.com/wp-content/uploads/2022/11/onda-scaled.webp"
                 alt=""> -->
-            <div class=" md:max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:items-center mt-[10vw]">
+            <div class=" md:max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:items-center mt-12 md:mt-[10vw]">
                 <img data-aos="fade-right" src="./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp"
                     class="rounded-lg shadow-lg w-[100%] lg:w-[450px]" alt="Yacht" />
 
@@ -311,7 +308,7 @@
 
 
             </div>
-            <div class="max-w-5xl mx-auto  md:grid md:grid-cols-2 gap-12 lg:items-center mt-[12vw]">
+            <div class="max-w-5xl mx-auto md:grid md:grid-cols-2 gap-8 md:gap-12 lg:items-center mt-16 md:mt-[12vw]">
 
                 <div class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
 
@@ -369,7 +366,7 @@
 
             </div>
 
-            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center mt-[12vw]">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center mt-16 md:mt-[12vw]">
                 <img src="./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
                     class="rounded-lg shadow-lg w-[100%] lg:w-[450px]" alt="Yacht" />
                 <div class="mt-[-50px]">
@@ -393,7 +390,7 @@
 
             </div>
 
-            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:items-center mt-[12vw]">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:items-center mt-16 md:mt-[12vw]">
 
                 <div class="flex flex-col pl-[30px] pr-[15px] border-l-[1.5px] border-[#808080]">
 
@@ -479,7 +476,7 @@
     </section>
 
     <!-- ===== INSTAGRAM STYLE GALLERY ===== -->
-    <section class="py-20 bg-[#fafafa]">
+    <section class="py-12 md:py-20 bg-[#fafafa]">
         <div class="max-w-7xl mx-auto px-6">
 
             <h2 data-aos="fade-up" class="text-center text-[32px] mb-10" style="font-family: 'Roboto Slab', serif;">
@@ -670,6 +667,7 @@
     <script>
         const topBar = document.getElementById("topBar");
         const header = document.getElementById("mainHeader");
+        const logo = document.getElementById("mainLogo");
         // const menuBtn = document.getElementById("menuBtn");
         // const mobileMenu = document.getElementById("mobileMenu");
         // const closeMenu = document.getElementById("closeMenu");
@@ -679,16 +677,22 @@
                 // hide top bar
                 topBar.classList.add("-translate-y-full", "opacity-0");
 
-                // popup header
-                header.classList.add("top-0", "shadow-lg");
-                header.classList.remove("top-8");
+                // popup header (White Background)
+                header.classList.add("top-0", "shadow-lg", "bg-white", "text-black");
+                header.classList.remove("top-8", "bg-transparent", "text-white");
+
+                // Invert logo to black (since it's a negative/white logo)
+                logo.classList.add("invert");
             } else {
                 // show top bar
                 topBar.classList.remove("-translate-y-full", "opacity-0");
 
-                // reset header
-                header.classList.add("top-8");
-                header.classList.remove("top-0", "shadow-lg");
+                // reset header (Transparent)
+                header.classList.add("top-8", "bg-transparent", "text-white");
+                header.classList.remove("top-0", "shadow-lg", "bg-white", "text-black");
+
+                // Reset logo
+                logo.classList.remove("invert");
             }
         });
 
@@ -771,9 +775,9 @@
         const nextBtn = document.getElementById('nextSlide');
 
         const images = [
-            "./image/569df540-f146-11ec-8b88-9dbc70a63290-Deep-Blue-II-refit.jpg",
-            "./image/2018-azimut-flybridge-power-9881341-20250723073208187-1.webp",
-            "./image/517781_fs-bayrideronwater_hero_1200x800.jpg"
+            "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1540946485063-a40da27545f8?q=80&w=2072&auto=format&fit=crop"
         ];
 
         let currentImageIndex = 0;
